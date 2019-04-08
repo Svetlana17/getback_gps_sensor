@@ -31,11 +31,13 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.github.ruleant.Sensor.ActivitySensor;
 import com.github.ruleant.getback_gps.lib.AriadneLocation;
 import com.github.ruleant.getback_gps.lib.CardinalDirection;
 import com.github.ruleant.getback_gps.lib.DebugLevel;
 import com.github.ruleant.getback_gps.lib.FormatUtils;
 import com.github.ruleant.getback_gps.lib.Navigator;
+import com.github.ruleant.gps.GPSActivity;
 
 /**
  * Main Activity class.
@@ -44,6 +46,7 @@ import com.github.ruleant.getback_gps.lib.Navigator;
  */
 public class MainActivity extends AbstractGetBackGpsActivity
         implements View.OnClickListener {
+    public String state = "DEFAULT";
     /**
      * Maximum length when displaying destination name (Portrait orientation).
      */
@@ -84,7 +87,17 @@ public class MainActivity extends AbstractGetBackGpsActivity
             getMenuInflater().inflate(R.menu.main, menu);
         }
 
-        return superResult;
+//            case R.id.GPS:
+//                state = "GPS";
+//                Intent intents = new Intent(MainActivity.this, MainActivity.class);
+//                startActivity(intents);
+//                return true;
+
+
+
+     //   }
+
+            return superResult;
     }
 
     @Override
@@ -95,11 +108,25 @@ public class MainActivity extends AbstractGetBackGpsActivity
         if (item.getItemId() == R.id.menu_details) {
             displayDetails(item);
             return true;
-        } else {
-            return super.onOptionsItemSelected(item);
         }
-    }
-
+        int id = item.getItemId();
+        switch (id) {
+            case R.id.Sensor:
+                state = "Sensor";
+                Intent intent = new Intent(MainActivity.this, ActivitySensor.class);
+                startActivity(intent);
+                return true;
+            case R.id.GPS:
+                state = "gps";
+                Intent intentGps = new Intent(MainActivity.this, GPSActivity.class);
+                startActivity(intentGps);
+                return true;
+        }
+        {
+                return super.onOptionsItemSelected(item);
+            }
+        }
+   // }
     @Override
     public boolean onPrepareOptionsMenu(final Menu menu) {
         MenuItem miDetails = menu.findItem(R.id.menu_details);

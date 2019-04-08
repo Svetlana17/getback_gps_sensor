@@ -1,91 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_desc">Find your way back to a previously visited location using GPS coordinates.</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_desc" translatable="false">Find your way back to a previously visited location using GPS coordinates.</string>
     <!-- Crouton messages -->
     <string name="inaccurate_location">Your current location is inaccurate</string>
     <string name="notice_no_dest">Store your location to set a destination</string>
     <string name="inaccurate_direction">Start moving to get an accurate direction to your destination</string>
     <string name="notice_destination_reached">You are at your destination</string>
-    <string name="notice_location_permission_required">Allow access to this device\'s location to enable location updates</string>
-    <string name="notice_location_no_permission">Location updates are turned off: Permission denied</string>
-    <string name="notice_location_permission_granted">Permission granted for location updates</string>
+    <string name="notice_location_permission_required" translatable="false">Allow access to this device\'s location to enable location updates</string>
+    <string name="notice_location_no_permission" translatable="false">Location updates are turned off: Permission denied</string>
+    <string name="notice_location_permission_granted" translatable="false">Permission granted for location updates</string>
     <!-- Strings related to Main activity -->
     <string name="current_speed">Current speed</string>
     <string name="speed_kph">km/h</string>
-    <string name="current_bearing">Current bearing</string>
+    <string name="current_bearing" translatable="false">Current bearing</string>
     <string name="distance">Distance</string>
-    <string name="distance_m">m</string>
-    <string name="distance_km">km</string>
-    <string name="height_difference">Height difference</string>
+
+
+    <string name="notification" translatable="false">notification</string>
+
+    <string name="distance_m" translatable="false">m</string>
+    <string name="distance_km" translatable="false">km</string>
+    <string name="height_difference" translatable="false">Height difference</string>
     <string name="direction">Direction</string>
-    <string name="northeast_unit">NE</string>
-    <string name="southeast_unit">SE</string>
-    <string name="southwest_unit">SW</string>
+    <string name="northeast_unit" translatable="false">NE</string>
+    <string name="southeast_unit" translatable="false">SE</string>
+    <string name="southwest_unit" translatable="false">SW</string>
     <string name="northwest_unit">NW</string>
-    <string name="location_updated">Location updated</string>
+    <string name="location_updated" translatable="false">Location updated</string>
     <string name="inaccurate">Inaccurate</string>
-    <string name="destination_reached">At destination</string>
+    <string name="destination_reached" translatable="false">At destination</string>
     <string name="no_destination">No destination set</string>
     <string name="unknown">Unknown</string>
-    <string name="refresh">Refresh</string>
+    <string name="refresh" translatable="false">Refresh</string>
     <!-- Strings related to Storing a location -->
-    <string name="dialog_store_location_name">Enter a name for your current location:</string>
-    <string name="dialog_rename_destination">Enter a new name for your destination:</string>
-    <string name="location_name">Location name</string>
-    <string name="cancel">Cancel</string>
-    <string name="store_location">Store Location</string>
-    <string name="rename_destination">Rename destination</string>
-    <string name="store_location_disabled">Unable to store location if there is no current location</string>
-    <string name="rename_destination_disabled">Unable to rename destination, store a location first</string>
-    <string name="location_stored">Location stored</string>
-    <string name="location_name_stored">Location \'%s\' stored</string>
-    <string name="destination_renamed">Destination renamed</string>
-    <string name="no_location_name">Location name was not specified</string>
+    <string name="dialog_store_location_name" translatable="false">Enter a name for your current location:</string>
+    <string name="dialog_rename_destination" translatable="false">Enter a new name for your destination:</string>
+    <string name="location_name" translatable="false">Location name</string>
+    <string name="cancel" translatable="false">Cancel</string>
+    <string name="store_location" translatable="false">Store Location</string>
+    <string name="rename_destination" translatable="false">Rename destination</string>
+    <string name="store_location_disabled" translatable="false">Unable to store location if there is no current location</string>
+    <string name="rename_destination_disabled" translatable="false">Unable to rename destination, store a location first</string>
+    <string name="location_stored" translatable="false">Location stored</string>
+    <string name="location_name_stored" translatable="false">Location \'%s\' stored</string>
+    <string name="destination_renamed" translatable="false">Destination renamed</string>
+    <string name="no_location_name" translatable="false">Location name was not specified</string>
     <!-- Strings related to Details activity -->
-    <string name="menu_details">Location details</string>
-    <string name="activity_details">Details</string>
-    <string name="location_provider">Location Provider</string>
-    <string name="name">Name</string>
-    <string name="provider">Provider</string>
-    <string name="loc_provider_network">Network (Cell phone/Wi-Fi)</string>
-    <string name="loc_provider_gps">GPS</string>
-    <string name="provider_no_support">Provider is not supported.</string>
-    <string name="curr_location">Current (last known) location</string>
-    <string name="latitude">Latitude</string>
-    <string name="latitude_north_unit">N</string>
-    <string name="latitude_south_unit">S</string>
-    <string name="longitude">Longitude</string>
-    <string name="longitude_east_unit">E</string>
-    <string name="longitude_west_unit">W</string>
-    <string name="altitude">Altitude</string>
-    <string name="speed">Speed</string>
-    <string name="bearing">Bearing</string>
-    <string name="sensor_bearing_offset">Sensor based bearing offset</string>
-    <string name="travel_direction">Travel direction</string>
-    <string name="travel_direction_forward">Forward</string>
-    <string name="travel_direction_backwards">Backwards</string>
-    <string name="accuracy">Accuracy</string>
-    <string name="timestamp">Timestamp</string>
-    <string name="destination">Destination</string>
-    <string name="to_dest">To Destination</string>
-    <string name="direction_relative">relative to current heading</string>
-    <string name="raw">Unformatted</string>
-    <string name="none">None</string>
-    <string name="notset">Not set</string>
-    <string name="loc_updated_recent">Location recently updated.</string>
-    <string name="loc_updated_not_recent">Location NOT recently updated.</string>
+    <string name="menu_details" translatable="false">Location details</string>
+    <string name="activity_details" translatable="false">Details</string>
+    <string name="location_provider" translatable="false">Location Provider</string>
+    <string name="name" translatable="false">Name</string>
+    <string name="provider" translatable="false">Provider</string>
+    <string name="loc_provider_network" translatable="false">Network (Cell phone/Wi-Fi)</string>
+    <string name="loc_provider_gps" translatable="false">GPS</string>
+    <string name="provider_no_support" translatable="false">Provider is not supported.</string>
+    <string name="curr_location" translatable="false">Current (last known) location</string>
+    <string name="latitude" translatable="false">Latitude</string>
+    <string name="latitude_north_unit" translatable="false">N</string>
+    <string name="latitude_south_unit" translatable="false">S</string>
+    <string name="longitude" translatable="false">Longitude</string>
+    <string name="longitude_east_unit" translatable="false">E</string>
+    <string name="longitude_west_unit" translatable="false">W</string>
+    <string name="altitude" translatable="false">Altitude</string>
+    <string name="speed" translatable="false">Speed</string>
+    <string name="bearing" translatable="false">Bearing</string>
+    <string name="sensor_bearing_offset" translatable="false">Sensor based bearing offset</string>
+    <string name="travel_direction" translatable="false">Travel direction</string>
+    <string name="travel_direction_forward" translatable="false">Forward</string>
+    <string name="travel_direction_backwards" translatable="false">Backwards</string>
+    <string name="accuracy" translatable="false">Accuracy</string>
+    <string name="timestamp" translatable="false">Timestamp</string>
+    <string name="destination" translatable="false">Destination</string>
+    <string name="to_dest" translatable="false">To Destination</string>
+    <string name="direction_relative" translatable="false">relative to current heading</string>
+    <string name="raw" translatable="false">Unformatted</string>
+    <string name="none" translatable="false">None</string>
+    <string name="notset" translatable="false">Not set</string>
+    <string name="loc_updated_recent" translatable="false">Location recently updated.</string>
+    <string name="loc_updated_not_recent" translatable="false">Location NOT recently updated.</string>
     <!-- Strings related to Settings -->
-    <string name="settings">Settings</string>
+    <string name="settings" translatable="false">Settings</string>
     <!-- General settings -->
-    <string name="pref_header_general">General</string>
-    <string name="pref_header_loc_update">Location Updates</string>
-    <string name="pref_loc_update_dist">Distance based updates</string>
-    <string name="pref_loc_update_time">Time based updates</string>
-    <string name="pref_enable_sensors">Use available sensors</string>
-    <string name="pref_geo_orientation_sensor">Default orientation sensor</string>
-    <string name="sensors_enabled">Enabled: Quicker updates and more accurate bearing</string>
-    <string name="sensors_disabled">Disabled: Saves power</string>
-    <string name="disabled">Disabled</string>
+    <string name="pref_header_general" translatable="false">General</string>
+    <string name="pref_header_loc_update" translatable="false">Location Updates</string>
+    <string name="pref_loc_update_dist" translatable="false">Distance based updates</string>
+    <string name="pref_loc_update_time" translatable="false">Time based updates</string>
+    <string name="pref_enable_sensors" translatable="false">Use available sensors</string>
+    <string name="pref_geo_orientation_sensor" translatable="false">Default orientation sensor</string>
+    <string name="sensors_enabled" translatable="false">Enabled: Quicker updates and more accurate bearing</string>
+    <string name="sensors_disabled" translatable="false">Disabled: Saves power</string>
+    <string name="disabled" translatable="false">Disabled</string>
     <plurals name="distance_meter">
         <item quantity="one">%d metre</item>
         <item quantity="other">%d metres</item>
@@ -104,12 +108,12 @@
         <item>Calculated orientation sensor</item>
     </string-array>
     <!-- Strings related to About activity -->
-    <string name="about">About</string>
-    <string name="version">Version</string>
-    <string name="build_time">Built on %s.</string>
-    <string name="app_website">Visit the &lt;a href="%1$s"&gt;website&lt;/a&gt; for more info.</string>
-    <string name="copyright">Copyright</string>
-    <string name="license">This program is free software: you can redistribute it and/or modify
+    <string name="about" translatable="false">About</string>
+    <string name="version" translatable="false">Version</string>
+    <string name="build_time" translatable="false">Built on %s.</string>
+    <string name="app_website" translatable="false">Visit the &lt;a href="%1$s"&gt;website&lt;/a&gt; for more info.</string>
+    <string name="copyright" translatable="false">Copyright</string>
+    <string name="license" translatable="false">This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     any later version.\n
@@ -121,4 +125,137 @@
     \n
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <a href="http://www.gnu.org/licenses/">www.gnu.org/licenses</a>.</string>
+    <string name="title_activity_sensor" translatable="false">ActivitySensor</string>
+    <string name="large_text" translatable="false">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+         <string name="max_speed">Max Speed</string>
+    <string name="average_speed">Average Speed</string>
+    <string name="distance" tools:ignore="DuplicateDefinition">Distance</string>
+    <string name="time">Time</string>
+    <string name="accuracy" tools:ignore="DuplicateDefinition">Accuracy</string>
+    <string name="satellite">Satellites</string>
+
+    <string name="waiting_for_fix">Waiting for GPS fix …</string>
+    <string name="gps_disabled">GPS disabled</string>
+    <string name="please_enable_gps">In order to use this app you need the GPS to be enabled.</string>
+
+    <string name="running">Route in process…</string>
+
+    <string name="notification">Max Speed : %1$s, Distance : %2$s.</string>
+
+    <string name="settings" tools:ignore="DuplicateDefinition">Settings</string>
+    <string name="app_info">About this app</string>
+    <string name="pref_auto_average">Automatically detect stop time.</string>
+    <string name="pref_auto_average_summary">The time spent at stop will not count in the average speed.</string>
+    <string name="pref_miles_per_hour">Use miles per hour</string>
+    <string name="pref_miles_per_hour_summary">Display the speed in mi/h instead of km/h</string>
+
+    <string name="license" tools:ignore="DuplicateDefinition">License</string>
+    <string name="donate">Donate</string>
+    <string name="donate_summary">Click in order to support my work :) …</string>
+    <string name="source_code">GitHub</string>
+    <string name="source_code_summary">Access to the source code.</string>
+    <string name="version" tools:ignore="DuplicateDefinition">Speedmeter Version</string>
+
+    <string name="noti_id" translatable="false">Speedmeterisanid</string>
+    <string name="github" translatable="false">https://github.com/flyingrub/SpeedMeter</string>
+    <string name="license_type" translatable="false">GNU General Public License 2</string>
+    <string name="doante_url" translatable="false">https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=6DE8SFMJKRVK2</string>
+    </string>
+    <string name="noti_id">noti_id</string>
+    <string name="max_speed">max_speed</string>
+    <string name="average_speed">average_speed</string>
+    <string name="time">time</string>
+    <string name="satellite">satellite</string>
+    <string name="waiting_for_fix">waiting_for_fix</string>
+    <string name="gps_disabled">gps_disabled</string>
+    <string name="please_enable_gps">please_enable_gps</string>
+    <string name="running">running</string>
+
 </resources>

@@ -2,62 +2,79 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.github.ruleant.getback_gps"
     android:versionCode="70"
-    android:versionName="0.7-dev" >
+    android:versionName="0.7-dev">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <uses-permission-sdk-23 android:name="string" />
 
-    <uses-feature android:name="android.hardware.location" android:required="true"/>
-    <uses-feature android:name="android.hardware.location.network" android:required="true"/>
-    <uses-feature android:name="android.hardware.location.gps" android:required="true"/>
-    <uses-feature android:name="android.hardware.sensor.compass" android:required="false"/>
-    <uses-feature android:name="android.hardware.sensor.gyroscope" android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.location"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.location.network"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.compass"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.sensor.gyroscope"
+        android:required="false" />
 
     <application
         android:allowBackup="true"
         android:fullBackupContent="@xml/backup_descriptor"
-        android:supportsRtl="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.github.ruleant.gps.SettingActivity"></activity>
+        <activity android:name="com.github.ruleant.gps.GPSActivity" />
+        <activity android:name="com.github.ruleant.Speedometr.SpedometrActivity" />
         <activity
-            android:name="com.github.ruleant.getback_gps.MainActivity"
-            android:label="@string/app_name" >
+            android:name="com.github.ruleant.Sensor.ActivitySensor"
+            android:label="@string/title_activity_sensor" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.github.ruleant.getback_gps.DetailsActivity"
+            android:name=".DetailsActivity"
             android:label="@string/activity_details"
-            android:parentActivityName="com.github.ruleant.getback_gps.MainActivity" >
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.github.ruleant.getback_gps.MainActivity" />
         </activity>
         <activity
-            android:name="com.github.ruleant.getback_gps.AboutActivity"
+            android:name=".AboutActivity"
             android:label="@string/about"
-            android:parentActivityName="com.github.ruleant.getback_gps.MainActivity" >
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.github.ruleant.getback_gps.MainActivity" />
         </activity>
         <activity
-            android:name="com.github.ruleant.getback_gps.SettingsActivity"
+            android:name=".SettingsActivity"
             android:label="@string/settings"
-            android:parentActivityName="com.github.ruleant.getback_gps.MainActivity" >
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.github.ruleant.getback_gps.MainActivity" />
         </activity>
 
         <service
-            android:name="com.github.ruleant.getback_gps.LocationService"
+            android:name=".LocationService"
             android:enabled="true"
-            android:exported="false" >
-        </service>
+            android:exported="false" />
     </application>
+
 </manifest>
