@@ -26,6 +26,7 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 28
+        vectorDrawables.useSupportLibrary = true
     }
 
     sourceSets {
@@ -75,6 +76,7 @@ dependencies {
     implementation 'com.melnykov:floatingactionbutton:1.3.0'
     implementation 'com.google.code.gson:gson:+'
     implementation 'com.github.navasmdc:MaterialDesign:1.+@aar'
+    implementation 'androidx.vectordrawable:vectordrawable:1.0.0-beta01'
     testImplementation 'junit:junit:4.12'
 }
 

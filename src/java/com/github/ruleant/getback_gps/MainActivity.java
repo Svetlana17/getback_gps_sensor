@@ -38,6 +38,7 @@ import com.github.ruleant.getback_gps.lib.DebugLevel;
 import com.github.ruleant.getback_gps.lib.FormatUtils;
 import com.github.ruleant.getback_gps.lib.Navigator;
 import com.github.ruleant.gps.GPSActivity;
+import com.github.ruleant.gps.Test_gps;
 
 /**
  * Main Activity class.
