@@ -31,7 +31,14 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.github.ruleant.gps.Test_gps"></activity>
+        <activity android:name=".lib.StartActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.github.ruleant.gps.Test_gps" />
         <activity android:name="com.github.ruleant.gps.SettingActivity" />
         <activity android:name="com.github.ruleant.gps.GPSActivity" />
         <activity android:name="com.github.ruleant.Speedometr.SpedometrActivity" />

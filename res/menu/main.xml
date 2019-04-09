@@ -16,4 +16,8 @@
         android:id="@+id/GPS"
         android:orderInCategory="3"
         android:title="GPS" />
+    <item
+        android:id="@+id/Main"
+        android:orderInCategory="4"
+        android:title="Главная" />
 </menu>
