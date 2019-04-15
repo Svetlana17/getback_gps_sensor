@@ -24,6 +24,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.TextView;
 import android.widget.Toolbar;
@@ -31,14 +32,18 @@ import android.widget.Toolbar;
 import com.gc.materialdesign.views.ProgressBarCircularIndeterminate;
 import com.gc.materialdesign.widgets.Dialog;
 import com.github.ruleant.Sensor.ActivitySensor;
+import com.github.ruleant.getback_gps.MainActivity;
 import com.github.ruleant.getback_gps.R;
 import com.github.ruleant.getback_gps.SettingsActivity;
+import com.github.ruleant.getback_gps.lib.MapsActivity;
+import com.github.ruleant.getback_gps.lib.StartActivity;
 import com.google.gson.Gson;
 import com.melnykov.fab.FloatingActionButton;
 
+import java.util.ArrayList;
 import java.util.Locale;
 
-public class GPSActivity extends Activity implements LocationListener, GpsStatus.Listener {
+public class GPSActivity extends Activity implements LocationListener, GpsStatus.Listener, View.OnClickListener {
 
     private SharedPreferences sharedPreferences;
     private LocationManager mLocationManager;
@@ -59,6 +64,8 @@ public class GPSActivity extends Activity implements LocationListener, GpsStatus
     private Data.OnGpsServiceUpdate onGpsServiceUpdate;
 
     private boolean firstfix;
+    private TextView verticalPost;
+    private Button map;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,6 +128,9 @@ public class GPSActivity extends Activity implements LocationListener, GpsStatus
                 s = new SpannableString(String.format("%.3f %s", distanceTemp, distanceUnits));
                 s.setSpan(new RelativeSizeSpan(0.5f), s.length() - distanceUnits.length() - 1, s.length(), 0);
                 distance.setText(s);
+
+                String d=String.format("%.3f m", data.getVerticalPost());
+                verticalPost.setText(d);
             }
         };
 
@@ -135,7 +145,9 @@ public class GPSActivity extends Activity implements LocationListener, GpsStatus
         time = (Chronometer) findViewById(R.id.time);
         currentSpeed = (TextView) findViewById(R.id.currentSpeed);
         progressBarCircularIndeterminate = (ProgressBarCircularIndeterminate) findViewById(R.id.progressBarCircularIndeterminate);
-
+        verticalPost=(TextView) findViewById(R.id.verticalPost);
+        map=(Button) findViewById(R.id.buttonMap);
+        map.setOnClickListener(this);
         time.setText("00:00:00");
         time.setOnChronometerTickListener(new Chronometer.OnChronometerTickListener() {
             boolean isPair = true;
@@ -298,9 +310,10 @@ public class GPSActivity extends Activity implements LocationListener, GpsStatus
 
         return super.onOptionsItemSelected(item);
     }
-
+ ArrayList<Location> locations=new ArrayList<>();
     @Override
     public void onLocationChanged(Location location) {
+        locations.add(location);
         if (location.hasAccuracy()) {
             double acc = location.getAccuracy();
             String units;
@@ -438,4 +451,23 @@ public class GPSActivity extends Activity implements LocationListener, GpsStatus
     public void onProviderDisabled(String s) {}
 
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.buttonMap:
+                Intent intentMap = new Intent(GPSActivity.this, MapsActivity.class);
+                int linght=locations.size();
+                double[] lats=new double[linght];
+                double[] lngs=new double[linght];
+                for (int i=0; i<linght; i++)
+                {
+                    lats[i]=locations.get(i).getLatitude();
+                    lngs[i]=locations.get(i).getLongitude();
+                }
+                intentMap.putExtra("lats" , lats);
+                intentMap.putExtra("lngs" , lngs);
+                startActivity(intentMap);
+                break;
+        }
+    }
 }

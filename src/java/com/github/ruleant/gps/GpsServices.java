@@ -90,6 +90,10 @@ public class GpsServices extends Service implements LocationListener, GpsStatus.
                     new isStillStopped().execute();
                 }
             }
+
+           double altitude= location.getAltitude();
+            data.setAltitide(altitude);
+
             data.update();
             updateNotification(true);
         }

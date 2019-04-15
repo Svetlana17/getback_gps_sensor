@@ -20,4 +20,8 @@
         android:id="@+id/Main"
         android:orderInCategory="4"
         android:title="Главная" />
+    <item
+        android:id="@+id/MAP"
+        android:orderInCategory="5"
+        android:title="MAP" />
 </menu>

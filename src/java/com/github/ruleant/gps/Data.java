@@ -12,8 +12,16 @@ public class Data {
     private double distanceM;
     private double curSpeed;
     private double maxSpeed;
-
+    private double altitude;
     private OnGpsServiceUpdate onGpsServiceUpdate;
+
+    public double getVerticalPost() {
+        return  altitude;
+    }
+
+    public void setAltitide(double altitude) {
+        this.altitude=altitude;
+    }
 
     public interface OnGpsServiceUpdate{
         public void update();

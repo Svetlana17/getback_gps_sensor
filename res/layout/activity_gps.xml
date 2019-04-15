@@ -11,7 +11,6 @@
         android:id="@+id/toolbarSpeed"
         android:layout_width="match_parent"
         android:layout_height="140dp"
-
         android:layout_gravity="center"
         android:background="@color/red"
         android:elevation="5dp">
@@ -160,6 +159,16 @@
         android:layout_marginLeft="20dp"
         android:layout_marginStart="20dp" />
 
+    <Button
+        android:id="@+id/buttonMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/separator2"
+        android:layout_toRightOf="@+id/titleDistance"
+        android:text="Map"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
     <TextView
         android:id="@+id/distance"
         android:text=""
@@ -174,6 +183,8 @@
         android:layout_marginRight="20dp"
         android:layout_marginEnd="20dp" />
 
+
+
     <View
         android:id="@+id/separator3"
         android:layout_width="fill_parent"
@@ -183,7 +194,46 @@
         android:layout_below="@+id/distance"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+<!---->
+    <TextView
+        android:id="@+id/titleVericalPost"
+        android:text="@string/VerticalPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/separator3"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp" />
 
+    <TextView
+        android:id="@+id/verticalPost"
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/separator3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp" />
+
+
+    <View
+        android:id="@+id/separator4"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey_lighter"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/verticalPost"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+    <!---->
     <TextView
         android:id="@+id/titleTime"
         android:text="@string/time"
@@ -191,7 +241,7 @@
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:textColor="@android:color/black"
-        android:layout_below="@id/separator3"
+        android:layout_below="@id/separator4"
         android:layout_marginTop="16dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -205,7 +255,7 @@
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:textColor="@android:color/black"
-        android:layout_below="@id/separator3"
+        android:layout_below="@id/separator4"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="16dp"
@@ -213,7 +263,7 @@
         android:layout_marginEnd="20dp" />
 
     <View
-        android:id="@+id/separator4"
+        android:id="@+id/separator5"
         android:layout_width="fill_parent"
         android:layout_height="1dp"
         android:background="@color/grey_lighter"
@@ -229,7 +279,7 @@
         android:layout_height="wrap_content"
         android:textSize="17sp"
         android:textColor="@android:color/black"
-        android:layout_below="@id/separator4"
+        android:layout_below="@id/separator5"
         android:layout_marginTop="16dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -250,7 +300,7 @@
         android:layout_alignEnd="@+id/separator5" />
 
     <View
-        android:id="@+id/separator5"
+        android:id="@+id/separator6"
         android:layout_width="1dp"
         android:layout_height="30dp"
         android:background="@color/grey_lighter"
@@ -285,7 +335,7 @@
         android:layout_marginEnd="20dp"/>
 
     <View
-        android:id="@+id/separator6"
+        android:id="@+id/separator7"
         android:layout_width="fill_parent"
         android:layout_height="1dp"
         android:background="@color/grey_lighter"
@@ -305,5 +355,6 @@
         android:textColor="@color/grey_light"
         android:layout_below="@+id/separator6"
         android:layout_centerHorizontal="true" />
+
 
 </RelativeLayout>

@@ -36,6 +36,7 @@ import com.github.ruleant.getback_gps.lib.AriadneLocation;
 import com.github.ruleant.getback_gps.lib.CardinalDirection;
 import com.github.ruleant.getback_gps.lib.DebugLevel;
 import com.github.ruleant.getback_gps.lib.FormatUtils;
+import com.github.ruleant.getback_gps.lib.MapsActivity;
 import com.github.ruleant.getback_gps.lib.Navigator;
 import com.github.ruleant.gps.GPSActivity;
 import com.github.ruleant.gps.Test_gps;
@@ -122,6 +123,11 @@ public class MainActivity extends AbstractGetBackGpsActivity
                 Intent intentGps = new Intent(MainActivity.this, GPSActivity.class);
                 startActivity(intentGps);
                 return true;
+            case R.id.MAP:
+                state = "map";
+                Intent intentMap= new Intent(MainActivity.this, MapsActivity.class);
+                startActivity(intentMap);
+                return  true;
         }
         {
                 return super.onOptionsItemSelected(item);
